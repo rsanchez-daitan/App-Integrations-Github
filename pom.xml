@@ -21,6 +21,11 @@
         </license>
     </licenses>
 
+    <properties>
+        <webapp.directory>github</webapp.directory>
+        <rpm.name>github-symphony-integration</rpm.name>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.symphonyoss</groupId>

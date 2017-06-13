@@ -4,6 +4,7 @@
     <field key="iconURL" value="iconURL"/>
 
     <object id="release" type="com.symphony.integration.github.release" version="1.0">
+        <field key="name" value="release.name" />
         <field key="tagName" value="release.tag_name" />
         <field key="url" value="release.html_url" />
 

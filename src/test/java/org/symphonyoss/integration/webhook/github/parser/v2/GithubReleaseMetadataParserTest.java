@@ -37,6 +37,11 @@ public class GithubReleaseMetadataParserTest extends GithubParserTest<GithubRele
   private static final String EXPECTED_FILE_RELEASE =
       "parser/release/v2/expected_xgithub_event_release.json";
 
+  private static final String PAYLOAD_FILE_RELEASE_WITH_NAME =
+      "parser/release/payload_xgithubevent_release_with_release_name.json";
+  private static final String EXPECTED_FILE_RELEASE_WITH_NAME =
+      "parser/release/v2/expected_xgithub_event_release_with_release_name.json";
+
   @Override
   protected String getExpectedTemplate() throws IOException {
     return SimpleFileUtils.readFile("templates/templateGithubRelease.xml");
@@ -50,6 +55,11 @@ public class GithubReleaseMetadataParserTest extends GithubParserTest<GithubRele
   @Test
   public void testRelease() throws IOException, GithubParserException {
     testParser(PAYLOAD_FILE_RELEASE, EXPECTED_FILE_RELEASE);
+  }
+
+  @Test
+  public void testReleaseWithName() throws IOException, GithubParserException {
+    testParser(PAYLOAD_FILE_RELEASE_WITH_NAME, EXPECTED_FILE_RELEASE_WITH_NAME);
   }
 }
 

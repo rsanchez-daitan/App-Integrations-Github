@@ -3,8 +3,13 @@
         <card class="barStyle" iconSrc="${entity['githubRelease'].iconURL}">
             <header>
                 <a href="${entity['githubRelease'].release.url}">
-                    Release ${entity['githubRelease'].release.tagName}
+                    <#if (entity['githubRelease'].release.name)??>
+                        Release ${entity['githubRelease'].release.name}
+                    <#else>
+                        Release ${entity['githubRelease'].release.tagName}
+                    </#if>
                 </a>
+
                 <span class="tempo-text-color--green"><b> created </b></span>
                 <span class="tempo-text-color--normal">by </span>
                 <span class="tempo-text-color--normal"><b>${entity['githubRelease'].release.author.name} </b></span>
